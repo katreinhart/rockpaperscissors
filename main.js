@@ -12,9 +12,7 @@ function rps() {
       console.dir(err)
       return
     } else {
-
       console.log(data)
-      
       
       if(!options.includes(entry)) {
         console.log('Please include a --entry= argument with one of the following: rock, paper, scissors')
@@ -28,6 +26,8 @@ function rps() {
       || (entry === 'paper' && computerChoice === 'scissors') 
       || (entry === 'scissors' && computerChoice === 'rock')) {
         console.log('Computer wins!')
+      } else if (entry === computerChoice) {
+        console.log('You tied.')
       } else {
         console.log('You win!')
       }
